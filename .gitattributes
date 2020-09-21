@@ -1,0 +1,4 @@
+* text=auto eol=lf
+
+SUPPORT.md linguist-documentation
+.github/** export-ignore
