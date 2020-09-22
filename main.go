@@ -38,8 +38,10 @@ type PixabayResponse struct {
 }
 
 type Page struct {
-	Title   string
-	Pixabay PixabayResponse
+	Title    string
+	Pixabay  PixabayResponse
+	Pexel    PexelsResponse
+	Unsplash UnsplashResponse
 }
 
 func main() {
@@ -60,7 +62,7 @@ func main() {
 				panic(err)
 			}
 
-			td := Page{"Main", makeRequest()}
+			td := Page{"Main", makeRequest(), makeRequest2(), makeRequest3()}
 			template, err := template.New("page").Parse(string(page))
 			if err != nil {
 				panic(err)

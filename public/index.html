@@ -12,12 +12,26 @@
 				<h2>Pixabay</h2>
 				{{range $val := .Pixabay.Hits }}
 				<picture>
-					<img src="{{$val.PreviewURL}}" alt="image" /><img />
+					<img src="{{$val.PreviewURL}}" alt="image" />
 				</picture>
 				{{end}}
 			</section>
-			<section></section>
-			<section></section>
+			<section>
+				<h2>Pexels</h2>
+				{{ range $val := .Pexel.Photos }}
+				<picture>
+					<img src="{{$val.Src.Tiny}}" alt="image" /><img />
+				</picture>
+				{{end}}
+			</section>
+			<section>
+				<h1>Unsplash</h1>
+				{{ range $val := .Unsplash.Results }}
+				<picture>
+					<img src="{{$val.Urls.Thumb}}" alt="image" /><img />
+				</picture>
+				{{end}}
+			</section>
 		</main>
 	</body>
 </html>
